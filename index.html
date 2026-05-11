@@ -3,81 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K3 Matrix | Algoritmik Anayasa</title>
+    <title>K3 MATRIX | Dijital Otonom Kontrol</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #0b0f19; /* O asil koyu obsidian zemin */
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            max-width: 600px;
-        }
-        .logo-title {
-            font-size: 2.8rem;
-            font-weight: 800;
-            letter-spacing: 3px;
-            margin-bottom: 5px;
-            color: #ffffff;
-            text-transform: uppercase;
-        }
-        .logo-subtitle {
-            font-size: 0.9rem;
-            color: #3b82f6; /* Şık mavi vurgu */
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 40px;
-        }
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            line-height: 1.4;
-            margin-bottom: 20px;
-        }
-        h1 span {
-            font-weight: 700;
-            color: #3b82f6;
-        }
-        p {
-            font-size: 1rem;
-            color: #94a3b8;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-        .badge {
-            display: inline-block;
-            padding: 8px 16px;
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px dashed #3b82f6;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            color: #3b82f6;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; text-align: center; margin: 0; padding: 20px; }
+        .logo { max-width: 200px; margin-top: 50px; }
+        h1 { margin-top: 20px; letter-spacing: 5px; color: #B8BCC4; }
+        .cta-container { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 40px 0; }
+        .btn { padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; min-width: 180px; transition: 0.3s; }
+        .btn-primary { background: #B8BCC4; color: #000; }
+        .btn-secondary { border: 2px solid #B8BCC4; color: #B8BCC4; }
+        #form-alani { margin-top: 60px; width: 100%; min-height: 600px; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="logo-title">K3 Matrix</div>
-        <div class="logo-subtitle">by Kamile Kara</div>
+    <img src="logo-icon.png" alt="K3 Matrix Logo" class="logo">
+    
+    <h1>K3 MATRIX</h1>
+    <p>İnşaat Operasyonlarında Algoritmik Disiplin</p>
 
-        <h1>İnisiyatif Değil,<br><span>Algoritmik Anayasa.</span></h1>
-        
-        <p>25 yıllık operasyon yönetimi tecrübesinin ve iş disiplininin, bypass edilemez kontrol katmanlarıyla şekillendiği dijital denetim altyapısı.</p>
+    <div class="cta-container">
+        <a href="manifesto.pdf" class="btn btn-primary" target="_blank">Manifestoyu İncele</a>
+        <a href="#form-alani" class="btn btn-secondary">Gözlem Listesine Katıl</a>
+    </div>
 
-        <div class="badge">TEST SÜRÜŞÜ HAZIRLIKLARI DEVAM EDİYOR</div>
+    <div id="form-alani">
+        <script async src="https://tally.so/widgets/embed.js"></script>
+        <iframe data-tally-src="https://tally.so/embed/pbR4p1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="K3 MATRIX Gözlem Listesi"></iframe>
     </div>
 
 </body>
