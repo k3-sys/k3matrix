@@ -3,35 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K3 MATRIX | Dijital Otonom Kontrol</title>
+    <title>K3 Matrix | İnşaat Sektörünün Dijital Operasyon Platformu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; }
-        h1 { margin-top: 50px; letter-spacing: 4px; color: #B8BCC4; font-size: 2.5rem; }
-        p { color: #888; margin-bottom: 30px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #0F1115; color: #FFFFFF; font-family: 'Inter', sans-serif; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+        
+        /* Hero Alanı */
+        #hero { padding: 100px 0 80px; text-align: center; }
+        .logo { width: 120px; height: auto; margin-bottom: 30px; }
+        h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: 8px; color: #B8BCC4; margin-bottom: 20px; }
+        .hero-slogan { font-size: 2.5rem; font-weight: 600; line-height: 1.2; color: #FFFFFF; margin-bottom: 40px; }
+        
         .cta-container { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px; }
-        .btn { padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; min-width: 200px; transition: 0.3s; cursor: pointer; border: none; display: inline-block; }
-        .btn-primary { background-color: #B8BCC4; color: #000; }
-        .btn-secondary { background-color: transparent; border: 2px solid #B8BCC4; color: #B8BCC4; }
+        .btn { padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: 600; min-width: 220px; transition: 0.3s; cursor: pointer; border: none; font-size: 1rem; display: inline-block; text-align: center; }
+        .btn-primary { background-color: #B8BCC4; color: #0F1115; }
+        .btn-secondary { background-color: transparent; border: 1px solid #B8BCC4; color: #B8BCC4; }
         .btn:hover { opacity: 0.8; }
-        #form-alani { background: #111; border-radius: 8px; padding: 10px; min-height: 600px; margin-top: 20px; }
+
+        section { padding: 100px 0 0; }
+        .section-title { font-size: 2rem; color: #FFFFFF; border-bottom: 1px solid #B8BCC4; padding-bottom: 10px; margin-bottom: 40px; font-weight: 600; display: inline-block; }
+
+        #santiye-m { padding: 80px 0; border-top: 1px solid rgba(184,188,196,0.15); border-bottom: 1px solid rgba(184,188,196,0.15); text-align: center; }
+        .label-krom { text-transform: uppercase; letter-spacing: 4px; color: #B8BCC4; font-size: 1rem; margin-bottom: 20px; display: block; }
+        .ana-cumle { font-size: 1.3rem; color: #FFFFFF; max-width: 800px; margin: 0 auto; font-weight: 400; }
+        .alt-aciklama { font-size: 0.95rem; color: #B8BCC4; max-width: 700px; margin: 20px auto 0; }
+
+        .intro-text { font-size: 1.05rem; line-height: 1.7; margin-bottom: 30px; }
+        .vurgu-cumle { font-style: italic; color: #B8BCC4; border-left: 4px solid #B8BCC4; padding-left: 20px; margin-bottom: 40px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .col-title { color: #B8BCC4; font-size: 1.4rem; font-weight: 600; margin-bottom: 10px; }
+        .grid-text { color: #FFFFFF; font-size: 1rem; }
+        .alt-vurgu { font-style: italic; color: #B8BCC4; text-align: center; font-size: 1.1rem; margin-top: 30px; display: block; }
+
+        .grid-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
+        .card { padding: 30px; border: 1px solid rgba(184,188,196,0.15); border-radius: 4px; background: rgba(184,188,196,0.03); }
+        .card-title { color: #B8BCC4; font-size: 1.3rem; font-weight: 600; margin-bottom: 12px; }
+        .card-text { font-size: 0.95rem; line-height: 1.6; color: #FFFFFF; }
+
+        .acilis-italic { font-style: italic; color: #B8BCC4; max-width: 800px; margin-bottom: 40px; }
+
+        .ana-ilke-blogu { padding: 40px; background: rgba(184,188,196,0.05); border-left: 4px solid #B8BCC4; margin: 40px 0; }
+        .ana-ilke-label { text-transform: uppercase; letter-spacing: 4px; color: #B8BCC4; font-size: 0.9rem; margin-bottom: 15px; display: block; }
+        .ana-ilke-h { font-size: 2.5rem; font-weight: 600; line-height: 1.3; color: #FFFFFF; margin-bottom: 20px; }
+        .ana-ilke-desc { font-size: 1rem; color: #FFFFFF; }
+        .ana-ilke-alt { font-style: italic; color: #B8BCC4; font-size: 1.05rem; margin-top: 20px; display: block; }
+        .destek-label { text-transform: uppercase; letter-spacing: 4px; color: #B8BCC4; font-size: 1rem; margin-top: 60px; margin-bottom: 30px; display: block; text-align: center; }
+
+        #form-alani { padding: 100px 0; }
+
+        @media (max-width: 600px) {
+            .container { padding: 0 20px; }
+            h1 { font-size: 2.2rem; letter-spacing: 4px; }
+            .hero-slogan { font-size: 1.8rem; }
+            section { padding: 60px 0 0; }
+            .grid-2, .grid-5 { grid-template-columns: 1fr; }
+            .ana-ilke-h { font-size: 1.8rem; }
+            .ana-ilke-blogu { padding: 20px; }
+            .btn { width: 100%; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>K3 MATRIX</h1>
-        <p>İnşaat Operasyonlarında Algoritmik Disiplin</p>
-
-        <div class="cta-container">
-            <a href="manifesto.pdf" target="_blank" class="btn btn-secondary">Manifestoyu İncele</a>
-            <a href="#form-alani" class="btn btn-primary">Gözlem Listesine Katıl</a>
+    <header id="hero">
+        <div class="container">
+            <img src="logo-icon.png" alt="K3 Matrix Logo" class="logo">
+            <h1>K3 MATRIX</h1>
+            <div class="hero-slogan">
+                İnisiyatif değil,<br>
+                algoritmik anayasa.
+            </div>
+            <div class="cta-container">
+                <a href="manifesto.pdf" class="btn btn-primary" target="_blank">Manifestoyu İncele</a>
+                <a href="#form-alani" class="btn btn-secondary">Gözlem Listesine Katıl</a>
+            </div>
         </div>
+    </header>
 
-        <div id="form-alani">
-            <iframe data-tally-src="https://tally.so/embed/pbR4p1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-                    loading="lazy" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" 
-                    title="K3 MATRIX Gözlem Listesi"></iframe>
+    <div id="santiye-m">
+        <div class="container">
+            <span class="label-krom">ŞANTİYE-M HAZIRLIĞI</span>
+            <div class="ana-cumle">
+                Şantiye-M kayıt ister. K3 Matrix, bu kaydın doğru, eksiksiz ve zamanında üretilmesini hedefler.
+            </div>
+            <div class="alt-aciklama">
+                1 Ocak 2026 itibarıyla zorunlu hale gelen Şantiye Yönetim Sistemi (Şantiye-M), Çevre, Şehircilik ve İklim Değişikliği Bakanlığı tarafından hayata geçirilmiştir.
+            </div>
+        </div>
+    </div>
+
+    <section id="gucluk">
+        <div class="container">
+            <h2 class="section-title">Güçlük</h2>
+            <div class="intro-text">
+                İnşaat sektörü, dünyanın en yüksek sermayeli, en karmaşık koordinasyonlu, en uzun süreli proje yapısına sahiptir. Bu yapının doğal sonucu, operasyonel verinin parçalı dağılmasıdır.
+            </div>
+            <div class="vurgu-cumle">
+                Bu güçlük, sektörde bilinmeyen bir sorun değildir. Sektör, bu güçlüğe iki ayrı koldan yanıt aramıştır.
+            </div>
+            <div class="grid-2">
+                <div>
+                    <h3 class="col-title">Birinci Kol</h3>
+                    <p class="grid-text">Bağımsız araçlar: planlama yazılımları, proje yönetim platformları, iletişim kanalları, dijital tablolar. Her biri kendi bağlamında değerlidir. Ancak bu araçların ortak bir omurgası yoktur.</p>
+                </div>
+                <div>
+                    <h3 class="col-title">İkinci Kol</h3>
+                    <p class="grid-text">Kurumsal sistemler: büyük ölçekli firmalar için kaynak sistemleri ve sektörel platformlar. Bir omurga sunar. Ancak sektörde yaygınlaşamamıştır. Çünkü yıllar süren adaptasyon, BT departmanı ve ayrı ekip gerektirir.</p>
+                </div>
+            </div>
+            <span class="alt-vurgu">Her iki durumda da hangi verinin doğru olduğu, çoğu zaman zamanında belirlenemez.</span>
+        </div>
+    </section>
+
+    <section id="yapi">
+        <div class="container">
+            <h2 class="section-title">Yapı</h2>
+            <div class="intro-text">
+                K3 Matrix, bu güçlüğün karşısına bir omurga ve onu işletmeye yarayan dahili modüllerle çıkar. Her modülün bir görevi vardır. Her görevin arkasında bir ilke.
+            </div>
+            <div class="grid-5">
+                <div class="card">
+                    <h3 class="card-title">M0 — Tasarım Kütüphanesi</h3>
+                    <p class="card-text">Projenin sıfırıncı adımı: anayasaya uygun bir tasarım kurulur. Her proje benzer kalıplardan başlar.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Kanban Altyapısı</h3>
+                    <p class="card-text">İş akışının görünür hâli. Hangi iş kimde, hangi aşamada, ne bekliyor — sürekli görünür.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Talep Yönetimi</h3>
+                    <p class="card-text">Şantiyeden gelen her talep, kayıt altında ve sahibine bağlı. Talep, bir mesaj değildir. Bir kayıttır.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Hakediş / Satınalma</h3>
+                    <p class="card-text">Onay zincirleri, fiyat geçmişi, tedarikçi bilgisi — tek yerde, denetlenebilir.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Maliyet Kokpiti</h3>
+                    <p class="card-text">Projenin maliyet sağlığı, anlık görünür. Sapma sonradan değil, oluşurken fark edilir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iki-yol">
+        <div class="container">
+            <h2 class="section-title">İki Yol</h2>
+            <div class="acilis-italic">
+                K3 Matrix iki firma profiline de açıktır. Her iki yolda da anayasa aynıdır.
+            </div>
+            <div class="grid-2">
+                <div>
+                    <h3 class="col-title">Detaylı Planlama Yapan Firmalar</h3>
+                    <p class="grid-text" style="line-height:1.7;">Mevcut araçlarıyla çalışmaya devam edebilir. K3 Matrix onların verisinin omurgasıdır, yerine geçen değildir. Mevcut yatırımlar korunur, veri tek çatı altında buluşur.</p>
+                </div>
+                <div>
+                    <h3 class="col-title">Sadeliği Tercih Eden Firmalar</h3>
+                    <p class="grid-text" style="line-height:1.7;">K3 Matrix'in dahili modülleriyle tek başına çalışabilir. Ek bir araca ihtiyaç duymadan, disiplini kurabilir. Sade, güçlü, bütünleşik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="anayasa">
+        <div class="container">
+            <h2 class="section-title">Anayasa</h2>
+            <div class="intro-text">
+                Buraya kadar K3 Matrix'in yapısını gördünüz: bir omurga, beş modül, iki kullanım yolu. Şimdi sorulması gereken: K3 Matrix neden böyle kuruldu? Çünkü bir ana ilkeye ve onu destekleyen beş ilkeye dayanır.
+            </div>
+
+            <div class="ana-ilke-blogu">
+                <span class="ana-ilke-label">ANA İLKE</span>
+                <div class="ana-ilke-h">Veri tek omurgada toplanmalıdır.</div>
+                <div class="ana-ilke-desc">
+                    Birbirinden bağımsız araçlarda biriken veriler bir sistem oluşturmaz. K3 Matrix, mevcut araçların yerine geçmeyi vadetmez. Onların ortak bir omurgada konuşmasını hedefler.
+                </div>
+                <span class="ana-ilke-alt">Diğer her şey bu ilkeden doğar.</span>
+            </div>
+
+            <span class="destek-label">DESTEKLEYİCİ İLKELER</span>
+            <div class="grid-5">
+                <div class="card">
+                    <h3 class="card-title" style="font-size: 1.2rem;">Her karar dijital bir iz bırakmalıdır.</h3>
+                    <p class="card-text">Bir karar verildiyse — kim verdi, ne zaman verdi, hangi alternatifleri değerlendirdi — bu sistemde kalır. 'Hatırlamıyorum' cevabı, bir kayıt yöntemi değildir.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title" style="font-size: 1.2rem;">Planlama opsiyonel değildir.</h3>
+                    <p class="card-text">Plan, ihtiyaca göre yapılan bir öneri değildir. Proje yaşam döngüsünün doğal bir parçasıdır. Sistem, plan oluşmadan ilerlemeye izin vermez.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title" style="font-size: 1.2rem;">Bekleme bir maliyettir. Görünür olmalıdır.</h3>
+                    <p class="card-text">Bir iş bir karar bekliyorsa, bir malzeme bir onay bekliyorsa — bu sistemde kayıt altında olmalıdır. K3 Matrix, beklemeyi yönetmeyi vadetmez. Beklemenin görünür kalmasını ilke edinir.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title" style="font-size: 1.2rem;">İnisiyatif denetlenebilir olmalıdır.</h3>
+                    <p class="card-text">İnsan iradesi değerlidir. Ama denetlenmediği yerde, sorumluluktan kaçışa dönüşür. Sistem, inisiyatifi yasaklamaz. Sadece görünür kılar.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title" style="font-size: 1.2rem;">Resmi sistemlere doğru veri sunulmalıdır.</h3>
+                    <p class="card-text">Şantiye-M kayıt ister. K3 Matrix, bu kaydın doğru, eksiksiz ve zamanında üretilmesini hedefler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="form-alani">
+        <div class="container">
+            <iframe data-tally-src="https://tally.so/embed/pbR4p1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="K3 MATRIX Gözlem Listesi"></iframe>
             <script async src="https://tally.so/widgets/embed.js"></script>
         </div>
     </div>
