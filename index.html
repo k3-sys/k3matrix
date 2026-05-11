@@ -5,26 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K3 MATRIX | Dijital Otonom Kontrol</title>
     <style>
-        body { background-color: #000; color: #fff; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
-        .logo { max-width: 200px; margin-top: 50px; }
-        h1 { margin-top: 20px; letter-spacing: 5px; color: #B8BCC4; }
-        .cta-container { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 40px 0; }
-        .btn { padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; min-width: 180px; transition: 0.3s; background: #B8BCC4; color: #000; display: inline-block; }
-        #form-alani { margin-top: 60px; width: 100%; min-height: 600px; }
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; }
+        h1 { margin-top: 50px; letter-spacing: 4px; color: #B8BCC4; font-size: 2.5rem; }
+        p { color: #888; margin-bottom: 30px; }
+        .cta-container { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px; }
+        .btn { padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; min-width: 200px; transition: 0.3s; cursor: pointer; border: none; }
+        .btn-primary { background-color: #B8BCC4; color: #000; }
+        .btn-secondary { background-color: transparent; border: 2px solid #B8BCC4; color: #B8BCC4; }
+        .btn:hover { opacity: 0.8; }
+        #form-alani { background: #111; border-radius: 8px; padding: 10px; min-height: 600px; }
     </style>
 </head>
 <body>
 
-    <h1>K3 MATRIX</h1>
-    <p>İnşaat Operasyonlarında Algoritmik Disiplin</p>
+    <div class="container">
+        <h1>K3 MATRIX</h1>
+        <p>İnşaat Operasyonlarında Algoritmik Disiplin</p>
 
-    <div class="cta-container">
-        <a href="#" class="btn">Gözlem Listesine Katıl</a>
-    </div>
+        <div class="cta-container">
+            <a href="#form-alani" class="btn btn-primary">Gözlem Listesine Katıl</a>
+            <a href="#" class="btn btn-secondary">Sistemi İncele</a>
+        </div>
 
-    <div id="form-alani">
-        <script async src="https://tally.so/widgets/embed.js"></script>
-        <iframe data-tally-src="https://tally.so/embed/pbR4p1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" title="K3 MATRIX Gözlem Listesi"></iframe>
+        <div id="form-alani">
+            <iframe data-tally-src="https://tally.so/embed/pbR4p1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                    loading="lazy" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" 
+                    title="K3 MATRIX Gözlem Listesi"></iframe>
+            <script async src="https://tally.so/widgets/embed.js"></script>
+            </div>
     </div>
 
 </body>
