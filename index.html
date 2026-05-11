@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K3 MATRIX | Dijital Otonom Kontrol</title>
     <style>
-        body { background-color: #000; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding: 20px; }
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding: 20px; }
         .container { max-width: 900px; margin: auto; }
         h1 { margin-top: 50px; letter-spacing: 4px; color: #B8BCC4; font-size: 2.5rem; }
         p { color: #888; margin-bottom: 30px; }
         .cta-container { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px; }
-        .btn { padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; min-width: 200px; transition: 0.3s; cursor: pointer; border: none; }
+        .btn { padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; min-width: 200px; transition: 0.3s; cursor: pointer; border: none; display: inline-block; }
         .btn-primary { background-color: #B8BCC4; color: #000; }
         .btn-secondary { background-color: transparent; border: 2px solid #B8BCC4; color: #B8BCC4; }
         .btn:hover { opacity: 0.8; }
-        #form-alani { background: #111; border-radius: 8px; padding: 10px; min-height: 600px; }
+        #form-alani { background: #111; border-radius: 8px; padding: 10px; min-height: 600px; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -24,8 +24,8 @@
         <p>İnşaat Operasyonlarında Algoritmik Disiplin</p>
 
         <div class="cta-container">
+            <a href="manifesto.pdf" target="_blank" class="btn btn-secondary">Manifestoyu İncele</a>
             <a href="#form-alani" class="btn btn-primary">Gözlem Listesine Katıl</a>
-            <a href="#" class="btn btn-secondary">Sistemi İncele</a>
         </div>
 
         <div id="form-alani">
@@ -33,7 +33,7 @@
                     loading="lazy" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" 
                     title="K3 MATRIX Gözlem Listesi"></iframe>
             <script async src="https://tally.so/widgets/embed.js"></script>
-            </div>
+        </div>
     </div>
 
 </body>
